@@ -14,7 +14,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 const pages = ['All', 'Previous', 'Next'];
-const settings = ['Home', 'Settings', 'Signup', 'Login'];
+const settings = ['Home', 'Profile', 'Signup', 'Login'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -36,7 +36,7 @@ function Navbar() {
   };
 
   const handleRoute = (link: string): string => {
-    let newLink = (link == "Home") || (link == "Settings") ? "/" : `/pages/${link}`
+    let newLink = (link == 'Home') ? "/" : `/pages/${link}`
     return newLink
   }
 
